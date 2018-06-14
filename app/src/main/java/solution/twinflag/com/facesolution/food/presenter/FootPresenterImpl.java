@@ -7,8 +7,10 @@ import java.text.DecimalFormat;
 
 import solution.twinflag.com.facesolution.R;
 import solution.twinflag.com.facesolution.domain.PersonInfo;
+import solution.twinflag.com.facesolution.domain.WeatherInfo;
 import solution.twinflag.com.facesolution.food.view.FootView;
 import solution.twinflag.com.facesolution.net.RetrofitManage;
+import solution.twinflag.com.facesolution.util.OnWeatherSuccessListener;
 import solution.twinflag.com.facesolution.util.PayStatus;
 
 public class FootPresenterImpl implements FootPresenter {
@@ -30,7 +32,14 @@ public class FootPresenterImpl implements FootPresenter {
         footView.showEnterPriceView();
         footView.hideConfirmPayMoneyView();
         payStatus = PayStatus.ENTER_PRICE;
-        RetrofitManage.getInstance().getWeatherInfo("101010100");
+        RetrofitManage.getInstance().getWeatherInfo("101010100", new OnWeatherSuccessListener() {
+            @Override
+            public void onSuccess(WeatherInfo weatherInfo) {
+                if (weatherInfo != null) {
+                    footView.showWeather(weatherInfo);
+                }
+            }
+        });
     }
 
     @Override

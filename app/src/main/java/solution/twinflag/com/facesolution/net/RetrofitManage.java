@@ -9,6 +9,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import solution.twinflag.com.facesolution.domain.WeatherInfo;
+import solution.twinflag.com.facesolution.util.OnWeatherSuccessListener;
 import solution.twinflag.com.facesolution.util.ParserUtils;
 
 public class RetrofitManage {
@@ -31,7 +32,7 @@ public class RetrofitManage {
         private static final RetrofitManage retrofitManager = new RetrofitManage();
     }
 
-    public void getWeatherInfo(String cityKey) {
+    public void getWeatherInfo(String cityKey, final OnWeatherSuccessListener listener) {
         WeatherService weatherService = retrofit.create(WeatherService.class);
         Call<ResponseBody> call = weatherService.getWeatherData(cityKey);
         call.enqueue(new Callback<ResponseBody>() {
@@ -39,6 +40,9 @@ public class RetrofitManage {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
                     WeatherInfo weatherInfo = ParserUtils.parserWeather(response.body().string());
+                    if (listener != null) {
+                        listener.onSuccess(weatherInfo);
+                    }
                     System.out.println(weatherInfo.toString());
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -47,7 +51,7 @@ public class RetrofitManage {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                System.out.println(t.getMessage());
+                listener.onSuccess(null);
             }
         });
     }
