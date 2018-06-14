@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".cupboard.FaceCupboardActivity">
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="42dp"
+        android:src="@mipmap/logo"
+        app:layout_constraintBottom_toTopOf="@+id/camera_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/camera_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_iv"
+        android:layout_marginBottom="94dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="194dp"
+        android:src="@mipmap/camera_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/scan_face_region"
+        android:layout_width="440dp"
+        android:layout_height="558dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="311dp"
+        android:background="@drawable/scan_face_bg"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/scan_face_region_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@mipmap/scan_bg"/>
+        <TextView
+            android:id="@+id/cup_board_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:text="@string/cup_board_tip"
+            android:textColor="@android:color/white"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_below="@+id/cup_board_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:text="张三三"
+            android:textStyle="bold"
+            android:textColor="@color/cup_customer_color"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/customer_number"
+            android:layout_below="@+id/customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="(0508A)"
+            android:textStyle="bold"
+            android:textColor="@color/cup_customer_color"
+            android:textSize="40px" />
+
+
+        <LinearLayout
+            android:id="@+id/cup_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_width="287dp"
+            android:layout_below="@+id/customer_number"
+            android:layout_marginTop="30dp"
+            android:layout_height="106dp"
+            android:orientation="vertical"
+            android:background="@mipmap/weather_bg">
+
+            <TextView
+                android:id="@+id/cup_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="35px"
+                android:text="已开"/>
+
+            <TextView
+                android:id="@+id/cup_number"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="35px"
+                android:text="A1108C中柜已开"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scan_face_tip"
+            android:layout_below="@+id/cup_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:textColor="@android:color/white"
+            android:text="@string/scan_face_tip_str"
+            android:textSize="30px" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="56dp"
+        android:background="@mipmap/weather_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="08:45"
+            android:textColor="@android:color/white"
+            android:textSize="32px" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/time"
+            android:gravity="center_horizontal"
+            android:text="星期三 2017-05-17"
+            android:textColor="@android:color/white"
+            android:textSize="14px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/weather_divider" />
+
+        <TextView
+            android:id="@+id/weather_temperature_icon"
+            android:layout_width="136dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="27C"
+            android:drawableLeft="@mipmap/ic_launcher_round"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/weather_info"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/weather_temperature_icon"
+            android:text="小雨        18C - 30C"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/menu_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="194dp"
+        android:src="@mipmap/school_infomation_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

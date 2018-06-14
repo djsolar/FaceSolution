@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">FaceSolution</string>
+
+    <string name="title_activity_face_food">FaceFoodActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_face_attendance">FaceAttendanceActivity</string>
+
+    <string name="title_activity_face_cupboard">FaceCupboardActivity</string>
+
+    <string name="title_activity_face_class_emotion">FaceClassEmotionActivity</string>
+    <string name="scan_face_tip_str">请站在指定区域刷脸支付</string>
+    <string name="enter_price_tip_str">消费金额</string>
+    <string name="left_money">当前余额</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pay_failed">支付失败</string>
+    <string name="pay_money">支付金额</string>
+    <string name="cup_board_tip">储物柜存取</string>
+    <string name="today_visitor_tip">今日访问量</string>
+    <string name="borrow_book_tip">借阅书籍</string>
+    <string name="teacher_tip_str">任课老师</string>
+    <string name="absent_str">旷&#8194;&#8194;&#8194;&#8194;课</string>
+    <string name="later_str">迟&#8194;&#8194;&#8194;&#8194;到</string>
+    <string name="real_str">实&#8194;&#8194;&#8194;&#8194;到</string>
+    <string name="should_str">应&#8194;&#8194;&#8194;&#8194;到</string>
+    <string name="student_attendance_str">学生考勤</string>
+    <string name="teacher_attendance_str">教职员工考勤</string>
+    <string name="money_unit">元</string>
+</resources>

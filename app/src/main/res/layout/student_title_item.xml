@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/student_item_title_bg">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="28px"
+        android:gravity="center"
+        android:text="姓名"
+        android:textColor="@color/student_title_color"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="28px"
+        android:gravity="center"
+        android:text="学号"
+        android:textColor="@color/student_title_color"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="28px"
+        android:gravity="center"
+        android:text="班级"
+        android:textColor="@color/student_title_color"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="28px"
+        android:gravity="center"
+        android:text="时间"
+        android:textColor="@color/student_title_color"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="28px"
+        android:gravity="center"
+        android:text="类型"
+        android:textColor="@color/student_title_color"/>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="money_color">#FE9E01</color>
+    <color name="money_fail_color">#E30808</color>
+    <color name="cup_customer_color">#fe9e01</color>
+    <color name="later_color">#FFCA36</color>
+    <color name="student_name_color">#FF7A04</color>
+    <color name="student_item_title_bg">#FEC845</color>
+    <color name="student_title_color">#3F1703</color>
+    <color name="student_odd_color">#eee6D1</color>
+    <color name="student_content_color">#744D15</color>
+    <color name="student_eve_color">#F9EFD7</color>
+    <color name="teacher_title_bg">#F0F9FE</color>
+    <color name="teacher_title_color">#333333</color>
+    <color name="teacher_content_color">#666666</color>
+    <color name="teacher_even_bg">#FFFFFF</color>
+    <color name="student_leave_color">#2DCD0E</color>
+    <color name="student_later_color">#E30808</color>
+</resources>

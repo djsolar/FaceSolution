@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/attendance_bg"
+    tools:context=".attendance.FaceAttendanceQueryActivity">
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="42dp"
+        android:src="@mipmap/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="56dp"
+        android:background="@mipmap/weather_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="08:45"
+            android:textColor="@android:color/white"
+            android:textSize="32px" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/time"
+            android:gravity="center_horizontal"
+            android:text="星期三 2017-05-17"
+            android:textColor="@android:color/white"
+            android:textSize="14px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/weather_divider" />
+
+        <TextView
+            android:id="@+id/weather_temperature_icon"
+            android:layout_width="136dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/ic_launcher_round"
+            android:gravity="center"
+            android:text="27C"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/weather_info"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/weather_temperature_icon"
+            android:gravity="center_horizontal"
+            android:text="小雨        18C - 30C"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="248dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/student_attendance_bg" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/teacher_attendance_bg" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50px"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/attendance_student_query"
+        android:drawableStart="@mipmap/attendance_student_query"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintRight_toRightOf="@+id/imageView5"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView5"
+        android:text="@string/student_attendance_str" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50px"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/tearcher_attendance_query"
+        android:drawableStart="@mipmap/tearcher_attendance_query"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintRight_toRightOf="@+id/imageView8"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView8"
+        android:text="@string/teacher_attendance_str" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/student_attendance_list"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintRight_toRightOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView5"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginBottom="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/teacher_attendance_list"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintRight_toRightOf="@+id/imageView8"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView8"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="158dp"
+        android:layout_marginBottom="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.ConstraintLayout>

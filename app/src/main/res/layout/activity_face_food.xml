@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".food.view.FaceFoodActivity">
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="42dp"
+        android:src="@mipmap/logo"
+        app:layout_constraintBottom_toTopOf="@+id/camera_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/camera_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_iv"
+        android:layout_marginBottom="94dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="194dp"
+        android:src="@mipmap/camera_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/scan_face_region"
+        android:layout_width="440dp"
+        android:layout_height="558dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="311dp"
+        android:background="@drawable/scan_face_bg"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/scan_face_region_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@mipmap/scan_bg"/>
+        <TextView
+            android:id="@+id/enter_price_tip"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:text="@string/enter_price_tip_str"
+            android:textColor="@android:color/white"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:text="张萌萌（0508A）"
+            android:textColor="@android:color/white"
+            android:textSize="40px" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/menu_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enter_price_tip"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="114dp"
+            android:textStyle="bold"
+            android:textColor="@color/money_color"
+            android:textSize="70px" />
+
+        <TextView
+            android:id="@+id/pay_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_name"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="114dp"
+            android:text="@string/pay_success"
+            android:textStyle="bold"
+            android:textColor="@color/money_color"
+            android:textSize="70px" />
+
+        <RelativeLayout
+            android:id="@+id/pay_money_ly"
+            android:layout_below="@+id/pay_tip"
+            android:layout_marginTop="82dp"
+            android:layout_marginLeft="54dp"
+            android:layout_marginRight="54dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:text="@string/pay_money"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/pay_money"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="10元"
+                android:textSize="46px"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/left_money_ly"
+            android:layout_below="@+id/pay_money_ly"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="54dp"
+            android:layout_marginRight="54dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:text="@string/left_money"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/left_money"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="200元"
+                android:textSize="46px"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/scan_face_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu_price"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="174dp"
+            android:textColor="@android:color/white"
+            android:text="@string/scan_face_tip_str"
+            android:textSize="30px" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="56dp"
+        android:background="@mipmap/weather_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextClock
+            android:id="@+id/time"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:format24Hour="H:mm"
+            android:textColor="@android:color/white"
+            android:textSize="32px" />
+
+        <TextClock
+            android:id="@+id/date_week"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/time"
+            android:gravity="center_horizontal"
+            android:format24Hour="EEEE  yyyy-MM-dd"
+            android:textColor="@android:color/white"
+            android:textSize="14px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/weather_divider" />
+
+        <TextView
+            android:id="@+id/weather_temperature"
+            android:layout_width="136dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="27C"
+            android:drawableLeft="@mipmap/ic_launcher_round"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/weather_info"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/weather_temperature"
+            android:text="小雨        18C - 30C"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/menu_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="194dp"
+        android:src="@mipmap/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/library_bg"
+    tools:context=".library.FaceLibraryActivity">
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="42dp"
+        android:src="@mipmap/logo"
+        app:layout_constraintBottom_toTopOf="@+id/camera_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/camera_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_iv"
+        android:layout_marginBottom="94dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="194dp"
+        android:src="@mipmap/camera_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/scan_face_region"
+        android:layout_width="440dp"
+        android:layout_height="558dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="311dp"
+        android:background="@drawable/scan_face_bg"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/scan_face_region_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@mipmap/scan_bg" />
+
+        <TextView
+            android:id="@+id/book_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center_horizontal"
+            android:text="@string/borrow_book_tip"
+            android:textColor="@android:color/white"
+            android:textSize="40px" />
+
+        <LinearLayout
+            android:id="@+id/book_layout"
+            android:layout_below="@id/book_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:background="@mipmap/weather_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cup_customer_color"
+                android:textSize="40px"
+                android:text="《莎士比亚》"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cup_customer_color"
+                android:textSize="40px"
+                android:text="《小王子》"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cup_customer_color"
+                android:textSize="40px"
+                android:text="《从你的全世界路过...》"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scan_face_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/book_tip"
+            android:layout_marginTop="380dp"
+            android:gravity="center_horizontal"
+            android:text="@string/scan_face_tip_str"
+            android:textColor="@android:color/white"
+            android:textSize="30px" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="56dp"
+        android:background="@mipmap/weather_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="08:45"
+            android:textColor="@android:color/white"
+            android:textSize="32px" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/time"
+            android:gravity="center_horizontal"
+            android:text="星期三 2017-05-17"
+            android:textColor="@android:color/white"
+            android:textSize="14px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/weather_divider" />
+
+        <TextView
+            android:id="@+id/weather_temperature_icon"
+            android:layout_width="136dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/ic_launcher_round"
+            android:gravity="center"
+            android:text="27C"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/weather_info"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/weather_temperature_icon"
+            android:gravity="center_horizontal"
+            android:text="小雨        18C - 30C"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/library_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="194dp"
+        android:src="@mipmap/library_recommond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/visitor_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintLeft_toRightOf="@id/camera_iv"
+        app:layout_constraintTop_toBottomOf="@id/library_recommend"
+        app:srcCompat="@mipmap/visitor_number_bg"
+        tools:layout_editor_absoluteX="488dp" />
+
+    <ImageView
+        android:id="@+id/book_borrow_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/library_recommend"
+        app:srcCompat="@mipmap/book_borrow_number" />
+
+    <TextView
+        android:id="@+id/visitor_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:ems="1"
+        android:text="@string/today_visitor_tip"
+        android:textColor="@android:color/white"
+        android:textSize="30px"
+        app:layout_constraintBottom_toBottomOf="@id/visitor_bg"
+        app:layout_constraintLeft_toLeftOf="@id/visitor_bg"
+        app:layout_constraintTop_toTopOf="@id/visitor_bg" />
+
+    <TextView
+        android:id="@+id/visitor_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="154dp"
+        android:text="300人次"
+        android:textSize="40px"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/visitor_bg"
+        app:layout_constraintLeft_toLeftOf="@id/visitor_bg"
+        app:layout_constraintTop_toTopOf="@id/visitor_bg" />
+
+
+</android.support.constraint.ConstraintLayout>
